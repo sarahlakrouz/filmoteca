@@ -13,8 +13,8 @@
         <h1>Filmoteca</h1>
         <nav>
             <ul>
-                <li><a href="#film">Liste des films</a></li>
-                <li><a href="#crud">CRUD des films</a></li>
+                <li><a href="accueil.html">Liste des films</a></li>
+                <li><a href="crud.php">CRUD des films</a></li>
                 <li><a href="#notations">Notations des films</a></li>
             </ul>
         </nav>
