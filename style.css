@@ -21,6 +21,8 @@ li {
 }
 
 img {
+    width :100px;
+    height: 150px;
     border-radius: 5px; 
     margin-bottom: 5px; 
 
@@ -39,3 +41,6 @@ nav ul {
     justify-content: center; 
 }
 
+footer{
+    text-align: center;
+}
