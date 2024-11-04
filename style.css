@@ -1,6 +1,6 @@
 body{
     font-family :Arial;
-    background-color : blue ;
+    background-color : wheat ;
 
 }
 
@@ -8,4 +8,18 @@ header{
     color : white;
     padding : 10px;
     text-align : center;
+}
+
+li {
+    
+    margin: 10px 0; 
+    padding: 10px; 
+    border-radius: 5px;
+    
+    
+}
+
+img {
+    border-radius: 5px; 
+    margin-bottom: 5px; 
 }
