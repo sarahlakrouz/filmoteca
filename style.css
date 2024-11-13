@@ -1,41 +1,108 @@
-body{
-    font-family :Arial;
-    background-color : wheat ;
-
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-header{
-    color : white;
-    padding : 10px;
-    text-align : center;
-}
-
-li {
-    
-    margin: 10px 0; 
-    padding: 10px; 
-    border-radius: 5px;
-    
-    
-    
-}
-
-img {
-    border-radius: 5px; 
-    margin-bottom: 5px; 
-
-}
-
-nav {
-    
-    padding: 10px; 
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
 }
 
 nav ul {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-    display: flex; 
-    justify-content: center; 
+    list-style-type: none;
+    padding: 0;
 }
 
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #35424a;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.film-item {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.film-year {
+    color: #888888;
+}
+
+.film-synopsis {
+    margin-top: 5px;
+    color: #333333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#film-table {
+    margin-top: 20px;
+}
+
+#film-table h2 {
+    margin-bottom: 15px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #35424a;
+    color: white;
+}
+
+td img {
+    border-radius: 5px;
+}
