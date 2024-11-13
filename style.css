@@ -5,17 +5,33 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
+
+header{
+    color : white;
+    padding : 10px;
+    text-align : center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+li {
+    
+    margin: 10px 0; 
+    padding: 10px; 
+    border-radius: 5px;
+    
+    
+    
 }
+
+img {
+    width :100px;
+    height: 150px;
+    border-radius: 5px; 
+    margin-bottom: 5px; 
+
+}
+
+
+
 
 nav ul li {
     display: inline;
@@ -105,4 +121,5 @@ th {
 
 td img {
     border-radius: 5px;
+
 }
