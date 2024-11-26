@@ -3,54 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Filmoteca - Page d'accueil</title>
+    <title>Liste des Films</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        td {
+            background-color: #fafafa;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Filmoteca</h1>
-        <nav>
-            <ul>
-                <li><a href="#film-table">Liste des films</a></li>
-                <li><a href="#crud">CRUD des films</a></li>
-                <li><a href="#notations">Notations des films</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="film-table">
-            <h2>Liste des films</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Titre</th>
-                        <th>Note</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="film1.jpg" alt="Le Comte de Monte Cristo" style="width:80px; height:120px;"></td>
-                        <td>Le Comte de Monte Cristo</td>
-                        <td>10/10</td>
-                        <td>Un homme emprisonné injustement qui cherche à se venger des personnes qui l'ont trahi.</td>
-                    </tr>
-                    <tr>
-                        <td><img src="R.jpg" alt="Le Voyage de Chihiro" style="width:80px; height:120px;"></td>
-                        <td>Le Voyage de Chihiro</td>
-                        <td>9/10</td>
-                        <td>Une jeune fille perdue dans un monde spirituel étrange qui doit sauver ses parents.</td>
-                    </tr>
-               
-                </tbody>
-            </table>
-        </section>
-    </main>
+    <h1>Liste des Films</h1>
 
-    <footer>
-        <p>&copy; 2024 Filmoteca. Tous droits réservés.</p>
-    </footer>
+  
+    <table>
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Année</th>
+                <th>Genre</th>
+                <th>Directeur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Exemple de ligne de film -->
+            <tr>
+                <td>Inception</td>
+                <td>2010</td>
+                <td>Science Fiction</td>
+                <td>Christopher Nolan</td>
+            </tr>
+            <tr>
+                <td>Le Parrain</td>
+                <td>1972</td>
+                <td>Drame</td>
+                <td>Francis Ford Coppola</td>
+            </tr>
+            <tr>
+                <td>Matrix</td>
+                <td>1999</td>
+                <td>Action</td>
+                <td>Lana et Lilly Wachowski</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
 </body>
 </html>
