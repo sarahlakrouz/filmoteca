@@ -12,11 +12,10 @@ class FilmController
 {
     private $twig;
 
-    public function construct()
+    public function __construct()
     {
         // Initialise le moteur de template Twig avec le bon chemin vers les vues
         $loader = new FilesystemLoader(__DIR__ . '/../views'); // Chemin vers les vues
-        dd(__DIR__ . '/../views');die;
         $this->twig = new Environment($loader);
     }
 
@@ -24,9 +23,9 @@ class FilmController
     {
         $filmRepository = new FilmRepository();
         $films = $filmRepository->findAll();
-
+        dd($films);
         // Utilise Twig pour rendre le template avec les films
-        echo $this->twig->render('list.html.twig', ['films' => $films]);
+        echo $this->twig->render('list.html.twig', ['film' => $films]);
     }
 
     public function create()
@@ -38,8 +37,8 @@ class FilmController
     {
         $filmRepository = new FilmRepository();
         $film = $filmRepository->find((int) $queryParams['id']);
+        echo $this->twig->render('list.html.twig', ['film' => $film]);
 
-        dd($film);
     }
 
     public function update()
