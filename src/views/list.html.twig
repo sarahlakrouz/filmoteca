@@ -1,99 +1,54 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du Film</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .film-details {
-            margin-top: 20px;
-        }
-        .film-details table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .film-details th, .film-details td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        .film-details th {
-            background-color: #f4f4f4;
-        }
-        .film-details td {
-            background-color: #fafafa;
-        }
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            text-align: center;
-        }
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Filmoteca</title>
 </head>
+
 <body>
-
-    <div class="container">
-        <h1>{{ film.title }}</h1>
-
-        <div class="film-details">
-            <table>
+    <main>
+        <table>
                 <tr>
-                    <th>Année</th>
-                    <td>{{ film.year }}</td>
-                </tr>
-                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Year</th>
                     <th>Type</th>
-                    <td>{{ film.type }}</td>
-                </tr>
-                <tr>
+                    <th>Genre</th>
                     <th>Synopsis</th>
-                    <td>{{ film.synopsis }}</td>
+                    <th>Director</th>
+                    <th>Deleted At</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
                 </tr>
-                <tr>
-                    <th>Réalisateur</th>
-                    <td>{{ film.director }}</td>
-                </tr>
-                <tr>
-                    <th>Date de création</th>
-                    <td>{{ film.createdAt|date('d/m/Y H:i') }}</td>
-                </tr>
-                {% if film.updatedAt %}
-                <tr>
-                    <th>Date de mise à jour</th>
-                    <td>{{ film.updatedAt|date('d/m/Y H:i') }}</td>
-                </tr>
-                {% endif %}
-            </table>
-        </div>
-
-        <a href="/films" class="back-button">Retour à la liste des films</a>
-    </div>
-
+                {% for film in films %}
+                    <tr>
+                        <td>{{ film.id }}</td>
+                        <td>{{ film.title }}</td>
+                        <td>{{ film.year }}</td>
+                        <td>{{ film.type }}</td>
+                        <td>{{ film.genre }}</td>
+                        <td>{{ film.synopsis }}</td>
+                        <td>{{ film.director }}</td>
+                        <td>
+                            {% if film.deletedAt %}
+                                {{ film.deletedAt | date('Y-m-d H:i:s') }}
+                            {% else %}
+                                null
+                            {% endif %}
+                        </td>
+                        <td>{{ film.createdAt | date('Y-m-d H:i:s') }}</td>
+                        <td>
+                            {% if film.updatedAt %}
+                                {{ film.updatedAt|date('Y-m-d H:i:s') }}
+                            {% else %}
+                                null
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+        </table>
+    </main>
 </body>
 </html>
+
+ 

@@ -23,7 +23,7 @@ class FilmController
     {
         $filmRepository = new FilmRepository();
         $films = $filmRepository->findAll();
-        dd($films);
+       
         // Utilise Twig pour rendre le template avec les films
         echo $this->twig->render('list.html.twig', ['film' => $films]);
     }
@@ -37,7 +37,7 @@ class FilmController
     {
         $filmRepository = new FilmRepository();
         $film = $filmRepository->find((int) $queryParams['id']);
-        echo $this->twig->render('list.html.twig', ['film' => $film]);
+        echo $this->twig->render('read.html.twig', ['film' => $film]);
 
     }
 
